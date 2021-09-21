@@ -1,0 +1,123 @@
+html,
+body {
+  height: 100%;
+  margin: 0;
+  background-color: #444;
+  overflow: hidden;
+}
+.clearfix:after {
+  content: "";
+  clear: both;
+  display: block;
+}
+.clearfixOld {
+  clear: both;
+}
+.slider {
+  max-width: 1000px;
+  position: relative;
+  padding: 5px;
+  margin: 15px auto;
+}
+.slider-content {
+    width: 100%;
+    /* max-height: 500px; */
+    white-space: nowrap;
+    overflow: hidden;
+    scroll-behavior: smooth;
+}
+/* @media (max-width:768px) {
+    .slider-content {
+        height: 500px;
+    }
+}
+@media (max-width:538px) {
+    .slider-content {
+        height: 370px;
+    }
+}
+@media (max-width:375px) {
+    .slider-content {
+        height: 240px;
+    }
+} */
+.slider-item {
+    display: inline-block;
+    min-width: 100%;
+    text-align: center;
+    transition-duration: 140ms;
+    transform: translate(0px, 0px) ;
+    user-select: none;
+}
+.slider-item img {
+    max-width: 100%;
+    max-height: 500px;
+    -webkit-user-drag: none;
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+}
+.slider-item:first-child {
+    transform: translate(0px, 0px) translateZ(0px);
+}
+
+.slider-controls-right {
+    right: 0;
+    top: 50%;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+.slider-controls a {
+    position: absolute;
+    transform: translateY(-50%);
+    text-decoration: none;
+    display: inline-block;
+    padding: 20px;
+    background-color: #FFF;
+    color: #000;
+    box-shadow: 0 0 10px rgba(0,0,0,0.4);
+    transition: 0.4s;
+}
+.slider-controls-left {
+    left: 0;
+    top: 50%;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+.slider-controls-close {
+    right: 10%;
+    top: 20%;
+    border-radius: 50px;
+    z-index: -1;
+    opacity: 0;
+}
+.lightbox {
+    z-index: 1;
+    opacity: 1;
+    transition: 0.5s;
+}
+.clightbox {
+    z-index: -1;
+    opacity: 0;
+}
+.slider-ul {
+    position: absolute;
+    top: 80%;
+    left: 50%;
+    margin-left: -100px;
+    list-style: none;
+    min-width: 200px;
+}
+.slider-ul-li {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border-radius: 50px;
+    border: 2px solid #FFF;
+    background: transparent;
+    margin: 5px;
+}
+.slider-ul-li a {
+    display: block;
+}
